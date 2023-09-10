@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/blog_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:textAlignment="textEnd">
+
+    <TextView
+        android:id="@+id/detail_post_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Blog Title"
+        android:textSize="26sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/layout_author_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_author_details"
+        app:layout_constraintBottom_toTopOf="@id/detail_post_description"
+        app:layout_constraintTop_toBottomOf="@id/detail_post_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/detail_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="John Doe" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="|"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/detail_post_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="05/12/2023" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/detail_post_description"
+        app:layout_constraintTop_toBottomOf="@id/layout_author_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Loream ipsum jhdkfhkshf dkhsk fkhdsfkhfds skhfkhsdkfhkh skdhfkhdskfhkh ksdhfkshdfkhaskdhshdhdk jshfkhskfdh sakhdkfh kASKHFDK KHKHKH kjsdkyf hkdfhkhfdgk kdsgkhdkgh kjdsfgkhdf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/detail_edit_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Edit Post" />
+        <Button
+            android:id="@+id/detail_delete_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Delete Post" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
